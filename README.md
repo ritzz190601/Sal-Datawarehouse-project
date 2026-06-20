@@ -50,18 +50,15 @@ The Data Warehouse is organized into the following layers:
 
 ### Fact Tables
 
-* FactSales
-* FactOrders
-* FactTransactions
+* fact_sales
+
 
 ### Dimension Tables
 
-* DimCustomer
-* DimProduct
-* DimDate
-* DimLocation
+* Dim_customer
+* Dim_product
 
-*(Modify according to your project structure.)*
+
 
 ---
 
@@ -101,73 +98,13 @@ The ETL workflow includes:
 
 ---
 
-## Database Structure
 
-```sql
-DataWarehouse
-│
-├── Staging
-│   ├── stg_Customers
-│   ├── stg_Products
-│   └── stg_Sales
-│
-├── Dimensions
-│   ├── DimCustomer
-│   ├── DimProduct
-│   ├── DimDate
-│   └── DimLocation
-│
-├── Facts
-│   └── FactSales
-│
-└── Views
-    ├── vw_SalesAnalysis
-    └── vw_CustomerInsights
-```
-
----
-
-## Setup Instructions
 
 ### Prerequisites
 
-* SQL Server 2019 or later
+* SQL Server 2021
 * SQL Server Management Studio (SSMS)
 
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/your-repository.git
-```
-
-2. Open SQL Server Management Studio.
-
-3. Execute scripts in the following order:
-
-```text
-01_Create_Database.sql
-02_Create_Staging_Tables.sql
-03_Create_Dimensions.sql
-04_Create_Facts.sql
-05_ETL_Load.sql
-06_Analytical_Views.sql
-```
-
-4. Verify data loads successfully.
-
----
-
-## Performance Optimization
-
-* Clustered and Non-Clustered Indexes
-* Query Optimization Techniques
-* Partitioning Strategies
-* Efficient ETL Loading
-* Aggregation Views
-
----
 
 ## Future Enhancements
 
